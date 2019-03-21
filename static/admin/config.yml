@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+
+collections: # A list of collections the CMS should be able to edit
+  - name: 'pages'
+    label: 'Page'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: true
+    files:
+    - file: 'editable/pages/index.md'
+      label: 'Home Page'
+      name: 'home-page'
+      fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "home"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
