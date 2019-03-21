@@ -15,7 +15,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     files:
-    - file: 'editable/pages/index.md'
+    - file: 'content/pages/index.md'
       label: 'Home Page'
       name: 'home-page'
       fields:
